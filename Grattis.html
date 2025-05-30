@@ -1,0 +1,238 @@
+<!Doctype html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <title>Grattis Ellen!</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 40px;
+            background: #e8d1a8;
+            font-family: 'Great Vibes', cursive;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            border: 40px solid transparent;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            z-index: 1;
+            position: relative;
+        }
+
+        .message {
+            width: 70vw;
+            max-width: 500px;
+            min-height: 300px;
+            background: #fbd4d4;
+            padding: 40px;
+            border-radius: 0px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            border: 3px solid #fbd4d4;
+            text-align: center;
+            font-family: 'Merriweather', serif;
+            transition: transform 0.3s ease;
+        }
+        
+        /*#e8d1a8
+        #fbd4d4*/
+
+        .message h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3rem;
+            color: black;
+            margin-bottom: 10px;
+        }
+
+        .message p {
+            font-size: 1rem;
+            color: darkslategrey;
+        }
+        
+        .photo {
+            width: 30vh;
+            max-width: 200px;
+            height: auto;
+            position: absolute;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            border: 2px solid #fff;
+            transform: rotate(-8deg);
+        }
+
+
+        .photo.ett {
+            left: -10px;
+            bottom: 100px;
+            z-index: 9;
+            transform: rotate(-8deg);
+        }
+
+        .photo.tva {
+            right: 0px;
+            top: 50px;
+            z-index: 9;
+            transform: rotate(10deg);
+        }
+
+        .photo.tre {
+            width: 22vh;
+            right: 0px;
+            top: 300px;
+            z-index: 9;
+            transform: rotate(-20deg);
+        }
+
+        .photo.fyra {
+            left: 0px;
+            top: 150px;
+            z-index: 9;
+            transform: rotate(10deg);
+        }
+
+        .bord-blom {
+            position: absolute;
+            width: 250px;
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        .bord-blom.upp {
+            top: 50px;
+            left: 30px;
+            transform: translate(-30%, -30%) rotate(-90deg);
+        }
+
+        .bord-blom.ned {
+            bottom: 0;
+            right: 0;
+            transform: translate(30%, 30%) rotate(15deg);
+        }
+
+        .mossa {
+            position: absolute;
+            width: 100px;
+            top:   40px;
+            right: 260px;
+            transform: rotate(15deg);
+            z-index: 5;
+        }
+
+        .heart {
+            position: fixed;
+            font-size: 5rem;
+            opacity: 0;
+            animation: popHeart 2.5s ease-out forwards;
+            pointer-events: none;
+            z-index: 999;
+        }
+
+        @keyframes popHeart {
+            0% {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            25% {
+                opacity: 1;
+                transform: scale(1.2);
+            }
+            50% {
+                transform: scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+        }
+    </style>
+</head>
+<body>
+    <img src="img/blom1.png" alt="Blomma uppe" class="bord-blom upp">
+    <img src="img/blom2.png" alt="Blomma nere" class="bord-blom ned">
+    <img src="img/bild1.jpg" alt="photo 1" class="photo ett">
+    <img src="img/bild2.jpg" alt="photo 2" class="photo tva">
+    <img src="img/bild3.jpg" alt="photo 3" class="photo tre">
+    <img src="img/bild4.jpg" alt="photo 4" class="photo fyra">
+    <img src="img/lakki.png" alt="mossa" class="mossa">
+    <div class="content">
+        <div class="message">
+            <h1>
+                GRATTIS ELLEN!
+            </h1>
+            <p>
+                🎓 Grattis på studenten Ellen!! 💗
+            </p>
+            <p>
+                Grattis så mycke min student!! Så fint jobbat ja e så stolt över dig 💕
+            </p>
+            <p>
+                Nu är det exakt ett år sedan du kom till min studentfest :D 
+            </p>
+            <p>
+                Jag kommer ihåg hur mycket jag stressade inför det och hur jag skulle introducera dig till alla och vilka moves jag skulle göra hahaha
+            </p>
+            <p>
+                Sen kom du dit med världens finaste studentkort och en blomma och gjorde mig till den lyckligaste studenten någonsin
+            </p>
+            <p>
+                
+            </p>
+            <p>
+                Hoppas du inte är lika stressad att ha mig på din studentfest hahha
+            </p>
+            <p>    
+                Du har jobbat jättemycket för den här dagen, och jag är jättestolt över dig!!
+                Hoppas min studieplan har hjälpt dig ens lite :D
+            </p>
+            <p>
+                Jag älskar dig! Tack för att du är en så perfekt flickvän.
+            </p>
+            <p>    
+                Se till att njuta så mycket av dagen, det kommer bli så skoj ❤️
+            </p>
+            <p>
+                Varma, kärleksfyllda hälsningar: Din pojkvän ❤️❤️
+            </p>
+        </div>
+    </div>
+    <script>
+        const hearts = ['❤️', '💗', '🎓', '🥰', '🐈'];
+
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerText = hearts[Math.floor(Math.random() * hearts.length)];
+
+            // Random position on screen
+            heart.style.left = Math.random() * 90 + "vw";
+            heart.style.top = Math.random() * 90 + "vh";
+
+            document.body.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 2500); // Match animation duration
+        }
+
+        setInterval(createHeart, 5000);
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script>
+        window.addEventListener('load', () => {
+            confetti({
+                particleCount: 250,
+                spread: 200,
+                origin: { y: 0.6 }
+            });
+        });
+    </script>
+</body>
+</html>
