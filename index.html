@@ -154,6 +154,61 @@
                 transform: scale(0.8);
             }
         }
+
+        @media (max-width: 768px) {
+            .photo {
+                width: 20vw;
+                max-width: 80px;
+            }
+        
+            .photo.ett {
+                left: 5px;
+                bottom: 20px;
+                transform: rotate(-5deg);
+            }
+        
+            .photo.tva {
+                right: 5px;
+                top: 20px;
+                transform: rotate(5deg);
+            }
+        
+            .photo.tre {
+                top: auto;
+                bottom: 100px;
+                right: 10px;
+                transform: rotate(-10deg);
+            }
+        
+            .photo.fyra {
+                top: 60px;
+                left: 10px;
+                transform: rotate(10deg);
+            }
+
+                .bord-blom {
+                width: 120px;
+            }
+
+            .bord-blom.upp {
+                top: 10px;
+                left: 10px;
+                transform: translate(-30%, -30%) rotate(-90deg);
+            }
+
+            .bord-blom.ned {
+                bottom: 10px;
+                right: 10px;
+                transform: translate(30%, 30%) rotate(15deg);
+            }
+
+            .mossa {
+                width: 100px;
+                top:   40px;
+                right: 260px;
+            }
+
+        }
     </style>
 </head>
 <body>
