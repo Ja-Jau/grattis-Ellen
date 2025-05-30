@@ -2,6 +2,7 @@
 <html lang="sv">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grattis Ellen!</title>
     <style>
         body {
@@ -21,7 +22,8 @@
 
         .content {
             display: flex;
-            flex-direction: row;
+            flex-direction: column; /* Stack items vertically */
+            padding: 20px;
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
@@ -30,11 +32,11 @@
         }
 
         .message {
-            width: 70vw;
+            width: 90vw;
             max-width: 500px;
+            padding: 30px 20px;
             min-height: 300px;
             background: #fbd4d4;
-            padding: 40px;
             border-radius: 0px;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
             border: 3px solid #fbd4d4;
